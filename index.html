@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Crazybaby Luna</title>
+    <title>CrazyBaby</title>
     <link
       rel="icon"
       href="src/images/favicon.png"
@@ -17,17 +17,20 @@
     />
   </head>
   <body id="top">
+    <!-- Header: logo, links principais, idiomas, botao de compra e menu mobile. -->
     <header class="header">
       <div class="header__container container">
+        <!-- Logo principal com link para voltar ao topo da pagina. -->
         <a
           class="logo header__logo"
-          href="#top"
+          href="#"
           aria-label="Crazybaby home"
         >
           <span class="logo__text">Crazybaby</span>
           <span class="logo__mark"></span>
         </a>
 
+        <!-- Navegacao principal usada em telas maiores. -->
         <nav
           class="nav header__nav"
           aria-label="Main navigation"
@@ -58,6 +61,7 @@
           </a>
         </nav>
 
+        <!-- Acoes do header: selecao de idioma e chamada para compra. -->
         <div class="header__actions">
           <a
             class="header__lang header__lang--active"
@@ -80,6 +84,7 @@
           </a>
         </div>
 
+        <!-- Botao hamburger que abre e fecha o menu mobile. -->
         <button
           class="header__menu"
           type="button"
@@ -92,6 +97,7 @@
         </button>
       </div>
 
+      <!-- Menu mobile com os mesmos links principais da pagina. -->
       <div class="mobile-menu">
         <a
           class="mobile-menu__link"
@@ -127,6 +133,7 @@
     </header>
 
     <main>
+      <!-- Hero: primeira dobra da pagina com titulo, texto curto e imagem do produto. -->
       <section class="hero">
         <div class="hero__container container">
           <div class="hero__content">
@@ -156,6 +163,7 @@
         </div>
       </section>
 
+      <!-- Navegacao interna posicionada abaixo do hero no desktop. -->
       <nav
         class="page-nav"
         aria-label="Page sections"
@@ -188,11 +196,13 @@
         </div>
       </nav>
 
+      <!-- Benefits: apresenta os quatro principais diferenciais do produto. -->
       <section
         class="benefits"
         id="benefits"
       >
         <div class="benefits__container container">
+          <!-- Card de beneficio com icone, titulo e descricao. -->
           <article class="benefits__item">
             <img
               class="benefits__icon"
@@ -208,6 +218,7 @@
             </p>
           </article>
 
+          <!-- Card de beneficio sobre o sistema de tweeter. -->
           <article class="benefits__item">
             <img
               class="benefits__icon"
@@ -222,6 +233,7 @@
             </p>
           </article>
 
+          <!-- Card de beneficio sobre conexao multiroom por Wi-Fi. -->
           <article class="benefits__item">
             <img
               class="benefits__icon"
@@ -236,6 +248,7 @@
             </p>
           </article>
 
+          <!-- Card de beneficio sobre controle de iluminacao. -->
           <article class="benefits__item">
             <img
               class="benefits__icon"
@@ -251,6 +264,7 @@
         </div>
       </section>
 
+      <!-- Presentation: imagem grande de apresentacao da familia Luna. -->
       <section class="presentation">
         <div class="presentation__container container">
           <img
@@ -261,6 +275,7 @@
         </div>
       </section>
 
+      <!-- About: historia do produto e origem da marca crazybaby. -->
       <section
         class="about"
         id="about"
@@ -285,7 +300,9 @@
             </p>
             <a
               class="text-link"
-              href="#technology"
+              href="https://crazybaby.com/"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               See more about us
             </a>
@@ -293,6 +310,7 @@
         </div>
       </section>
 
+      <!-- Technology: explica o Luna Eye e mostra a imagem detalhada do componente. -->
       <section
         class="technology"
         id="technology"
@@ -307,7 +325,9 @@
             </p>
             <a
               class="text-link"
-              href="#features"
+              href="https://crazybaby.com/"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               See more about us
             </a>
@@ -320,6 +340,7 @@
         </div>
       </section>
 
+      <!-- Testimonials: depoimento centralizado com avatar e cargo da pessoa. -->
       <section class="testimonials">
         <div class="testimonials__container container">
           <blockquote class="testimonials__quote">
@@ -337,6 +358,7 @@
         </div>
       </section>
 
+      <!-- Features: bloco tecnico com listas de conectividade, app e som. -->
       <section
         class="features"
         id="features"
@@ -344,6 +366,7 @@
         <div class="features__container container">
           <h2 class="section-title features__title">Features</h2>
           <div class="features__panel">
+            <!-- Lista de recursos de conectividade do produto. -->
             <div class="features__group">
               <h3 class="features__subtitle">Connectivity</h3>
               <ul class="features__list">
@@ -356,6 +379,7 @@
               </ul>
             </div>
 
+            <!-- Lista de recursos disponiveis pelo aplicativo. -->
             <div class="features__group">
               <h3 class="features__subtitle">App features</h3>
               <ul class="features__list">
@@ -366,6 +390,7 @@
               </ul>
             </div>
 
+            <!-- Lista de recursos de audio e musica. -->
             <div class="features__group">
               <h3 class="features__subtitle">Sound &amp; music</h3>
               <ul class="features__list">
@@ -378,6 +403,7 @@
               </ul>
             </div>
 
+            <!-- Imagem explodida do speaker para complementar as listas. -->
             <img
               class="features__image"
               src="src/images/Frame 13.png"
@@ -387,6 +413,7 @@
         </div>
       </section>
 
+      <!-- Questions: chamada de contato com formulario de email e mensagem. -->
       <section
         class="questions"
         id="questions"
@@ -397,6 +424,7 @@
             questions?
           </h2>
 
+          <!-- Formulario estatico da landing page. -->
           <form class="form questions__form">
             <label class="form__field">
               <span class="visually-hidden">Your email</span>
@@ -404,6 +432,7 @@
                 class="form__input"
                 type="email"
                 name="email"
+                autocomplete="email"
                 placeholder="Your email"
                 required
               />
@@ -413,6 +442,7 @@
               <textarea
                 class="form__input form__input--textarea"
                 name="message"
+                autocomplete="off"
                 placeholder="Your message..."
                 required
               ></textarea>
@@ -428,42 +458,51 @@
       </section>
     </main>
 
+    <!-- Footer: logo, redes sociais, link para topo e copyright. -->
     <footer class="footer">
       <div class="footer__container container">
         <a
           class="logo footer__logo"
-          href="#top"
+          href="#"
           aria-label="Crazybaby home"
         >
           <span class="logo__text">Crazybaby</span>
           <span class="logo__mark"></span>
         </a>
 
+        <!-- Link visual em forma de seta para voltar ao topo. -->
         <a
           class="footer__top"
           href="#top"
           aria-label="Back to top"
         ></a>
 
+        <!-- Links sociais representados por icones feitos em CSS. -->
         <ul class="social footer__social">
           <li class="social__item">
             <a
               class="social__link social__link--facebook"
-              href="#"
+              href="https://www.facebook.com/crazybabyaudio"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Facebook"
             ></a>
           </li>
           <li class="social__item">
             <a
               class="social__link social__link--twitter"
-              href="#"
+              href="https://twitter.com/crazybabyaudio"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Twitter"
             ></a>
           </li>
           <li class="social__item">
             <a
               class="social__link social__link--instagram"
-              href="#"
+              href="https://www.instagram.com/crazybabyaudio/"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Instagram"
             ></a>
           </li>
