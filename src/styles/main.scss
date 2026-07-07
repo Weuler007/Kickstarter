@@ -14,11 +14,13 @@ html {
 body {
   min-width: 320px;
   margin: 0;
-  color: $color-dark;
-  background: $color-page;
+
   font-family: Roboto, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.5;
+  color: $color-dark;
+
+  background: $color-page;
 }
 
 img {
@@ -59,19 +61,23 @@ textarea {
 // Acessibilidade: texto visivel apenas para leitores de tela.
 .visually-hidden {
   position: absolute;
+
+  overflow: hidden;
+
   width: 1px;
   height: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
+
   white-space: nowrap;
+
+  clip: rect(0 0 0 0);
 }
 
 // Tipografia compartilhada: titulo usado em varias sections.
 .section-title {
-  color: $color-dark;
   font-size: 30px;
   font-weight: 700;
   line-height: 1.3;
+  color: $color-dark;
   text-transform: uppercase;
 
   @include on-tablet {
@@ -87,19 +93,25 @@ textarea {
 // Link decorado usado nas chamadas "See more about us".
 .text-link {
   display: inline-block;
-  color: $color-accent;
+
   font-weight: 700;
   line-height: 1.2;
+  color: $color-accent;
   text-transform: uppercase;
 
   &::after {
     content: '';
+
+    transform-origin: left;
+
     display: block;
+
     width: 53px;
     height: 1px;
     margin-top: 5px;
+
     background-color: $color-accent;
-    transform-origin: left;
+
     transition: transform 0.3s;
   }
 
@@ -110,18 +122,22 @@ textarea {
 
 // Botao reutilizavel com variacoes de cor.
 .button {
+  cursor: pointer;
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
+
   min-width: 102px;
   min-height: 48px;
   border: 0;
-  color: $color-white;
+
   font-size: 12px;
   font-weight: 700;
   line-height: 1;
+  color: $color-white;
   text-transform: uppercase;
-  cursor: pointer;
+
   transition:
     background-color 0.3s,
     color 0.3s;
@@ -146,13 +162,15 @@ textarea {
 // Logo da marca criado com texto e simbolo em CSS.
 .logo {
   display: inline-flex;
-  align-items: center;
   gap: 4px;
-  color: $color-black;
+  align-items: center;
+
   font-weight: 700;
-  letter-spacing: 2px;
   line-height: 1;
+  color: $color-black;
   text-transform: uppercase;
+  letter-spacing: 2px;
+
   transition: transform 0.3s;
 
   &:hover {
@@ -161,30 +179,38 @@ textarea {
 
   &__mark {
     position: relative;
+
     width: 20px;
     height: 20px;
     border-radius: 50%;
+
     background-color: $color-black;
 
     &::before {
       content: '';
+
       position: absolute;
       top: -6px;
       left: 6px;
+
       width: 8px;
       height: 8px;
       border-radius: 8px 8px 0 0;
+
       background-color: $color-black;
     }
 
     &::after {
       content: '';
+
       position: absolute;
       top: 5px;
       left: 5px;
+
       width: 10px;
       height: 10px;
       border-radius: 50%;
+
       background-color: $color-page;
     }
   }
@@ -193,8 +219,8 @@ textarea {
 // Header: topo da pagina, acoes e menu hamburger.
 .header {
   position: sticky;
-  top: 0;
   z-index: 20;
+  top: 0;
   background-color: rgba($color-page, 0.96);
 
   &__container {
@@ -214,13 +240,16 @@ textarea {
   }
 
   &__menu {
+    cursor: pointer;
+
     display: grid;
+
     width: 32px;
     height: 32px;
     padding: 7px 4px;
     border: 0;
+
     background-color: transparent;
-    cursor: pointer;
   }
 
   &__menu-line {
@@ -233,8 +262,8 @@ textarea {
   }
 
   &__lang {
-    color: $color-light-gray;
     font-size: 14px;
+    color: $color-light-gray;
 
     &--active {
       color: $color-dark;
@@ -266,8 +295,8 @@ textarea {
 
     &__actions {
       display: flex;
-      align-items: center;
       gap: 4px;
+      align-items: center;
     }
 
     &__button {
@@ -290,12 +319,12 @@ textarea {
 
 // Navegacao principal do header.
 .nav {
-  align-items: center;
   gap: 84px;
+  align-items: center;
 
   &__link {
-    color: $color-dark;
     font-size: 14px;
+    color: $color-dark;
     text-transform: uppercase;
     transition: color 0.3s;
 
@@ -309,17 +338,21 @@ textarea {
 .mobile-menu {
   position: fixed;
   inset: 76px 0 auto;
+  transform: translateY(-130%);
+
   display: grid;
   gap: 26px;
+
   padding: 28px 30px 40px;
+
   background-color: $color-page;
   box-shadow: 0 12px 24px rgba($color-black, 0.08);
-  transform: translateY(-130%);
+
   transition: transform 0.3s;
 
   &__link {
-    color: $color-dark;
     font-weight: 700;
+    color: $color-dark;
     text-transform: uppercase;
   }
 
@@ -351,16 +384,17 @@ textarea {
 
     &__container {
       display: flex;
-      justify-content: center;
       gap: 84px;
+      justify-content: center;
     }
 
     &__link {
-      color: $color-dark;
       font-size: 12px;
       font-weight: 400;
       line-height: 1.2;
+      color: $color-dark;
       text-transform: uppercase;
+
       transition: color 0.3s;
 
       &--active {
@@ -386,18 +420,19 @@ textarea {
 
   &__title {
     max-width: 420px;
-    color: $color-dark;
+
     font-size: 40px;
     font-weight: 700;
     line-height: 1.3;
+    color: $color-dark;
     text-transform: uppercase;
   }
 
   &__text {
     max-width: 276px;
     margin-top: 24px;
-    color: $color-dark;
     font-size: 16px;
+    color: $color-dark;
   }
 
   &__picture {
@@ -406,8 +441,8 @@ textarea {
   }
 
   &__image {
-    width: 100%;
     cursor: pointer;
+    width: 100%;
   }
 
   @include on-tablet {
@@ -416,8 +451,8 @@ textarea {
     &__container {
       display: grid;
       grid-template-columns: 1fr 58%;
-      align-items: center;
       gap: 0;
+      align-items: center;
     }
 
     &__content {
@@ -469,10 +504,13 @@ textarea {
   }
 
   &__icon {
+    cursor: pointer;
+
     width: 70px;
     height: 50px;
-    cursor: pointer;
+
     object-fit: contain;
+
     transition: transform 0.3s;
 
     &:hover {
@@ -483,19 +521,21 @@ textarea {
   &__title {
     min-height: 44px;
     margin-top: 36px;
-    color: $color-dark;
+
     font-size: 22px;
     font-weight: 700;
     line-height: 1.27;
+    color: $color-dark;
     text-transform: uppercase;
   }
 
   &__text {
     max-width: 276px;
     margin-top: 20px;
-    color: $color-gray;
+
     font-size: 14px;
     line-height: 1.5;
+    color: $color-gray;
   }
 
   @include on-tablet {
@@ -522,9 +562,9 @@ textarea {
   padding: 36px 0 58px;
 
   &__image {
+    cursor: pointer;
     width: min(100%, 846px);
     margin: 0 auto;
-    cursor: pointer;
     transition: transform 0.3s;
 
     &:hover {
@@ -547,10 +587,13 @@ textarea {
   }
 
   &__image {
+    cursor: pointer;
+
     width: 100%;
     min-height: 210px;
-    cursor: pointer;
+
     object-fit: cover;
+
     transition: transform 0.3s;
 
     &:hover {
@@ -560,9 +603,9 @@ textarea {
 
   &__text {
     margin: 24px 0 30px;
-    color: $color-gray;
     font-size: 16px;
     line-height: 1.5;
+    color: $color-gray;
   }
 
   &__nowrap {
@@ -605,15 +648,18 @@ textarea {
 
   &__text {
     margin: 24px 0 30px;
-    color: $color-gray;
     font-size: 16px;
+    color: $color-gray;
   }
 
   &__image {
+    cursor: pointer;
+
     width: 100%;
     min-height: 210px;
-    cursor: pointer;
+
     object-fit: cover;
+
     transition: transform 0.3s;
 
     &:hover {
@@ -626,8 +672,8 @@ textarea {
 
     &__container {
       grid-template-columns: 1fr 50%;
-      align-items: center;
       gap: 36px;
+      align-items: center;
     }
 
     &__image {
@@ -661,24 +707,27 @@ textarea {
 
     &::before {
       content: '“';
+
       position: absolute;
+      z-index: -1;
       top: -64px;
       left: 50%;
-      z-index: -1;
-      color: $color-extra-light;
+      transform: translateX(-50%);
+
       font-size: 220px;
       font-weight: 700;
       line-height: 1;
-      transform: translateX(-50%);
+      color: $color-extra-light;
     }
   }
 
   &__quote {
     max-width: 786px;
-    color: $color-dark;
+
     font-size: 18px;
     font-weight: 700;
     line-height: 1.5;
+    color: $color-dark;
   }
 
   &__avatar {
@@ -690,9 +739,9 @@ textarea {
 
   &__name {
     margin-top: 20px;
-    color: $color-dark;
     font-size: 16px;
     font-weight: 700;
+    color: $color-dark;
   }
 
   &__position {
@@ -727,19 +776,23 @@ textarea {
 
   &__panel {
     position: relative;
+
+    overflow: hidden;
     display: grid;
     gap: 28px;
-    overflow: hidden;
+
     padding: 30px;
+
     background-color: #d6ecec;
   }
 
   &__subtitle {
     margin-bottom: 16px;
-    color: $color-accent-dark;
+
     font-size: 18px;
     font-weight: 700;
     line-height: 1.2;
+    color: $color-accent-dark;
     text-transform: uppercase;
   }
 
@@ -755,11 +808,14 @@ textarea {
   }
 
   &__image {
-    place-self: end;
-    width: min(100%, 416px);
-    margin-bottom: -30px;
-    margin-right: -30px;
     cursor: pointer;
+
+    place-self: end;
+
+    width: min(100%, 416px);
+    margin-right: -30px;
+    margin-bottom: -30px;
+
     transition: transform 0.3s;
 
     &:hover {
@@ -848,9 +904,12 @@ textarea {
     height: 48px;
     padding: 12px 18px;
     border: 1px solid $color-light-gray;
+
     color: $color-dark;
+
     background-color: transparent;
     outline: none;
+
     transition: border-color 0.3s;
 
     &::placeholder {
@@ -865,14 +924,15 @@ textarea {
     &:-webkit-autofill:hover,
     &:-webkit-autofill:focus {
       border-color: $color-accent;
-      -webkit-text-fill-color: $color-dark;
       box-shadow: 0 0 0 1000px $color-page inset;
       transition: background-color 5000s ease-in-out 0s;
+
+      -webkit-text-fill-color: $color-dark;
     }
 
     &--textarea {
-      height: 128px;
       resize: none;
+      height: 128px;
     }
   }
 
@@ -904,13 +964,11 @@ textarea {
     position: absolute;
     top: 0;
     right: 0;
+
     width: 28px;
     height: 28px;
-    transition: transform 0.3s;
 
-    &:hover {
-      transform: scale(1.22);
-    }
+    transition: transform 0.3s;
 
     &::before,
     &::after {
@@ -929,12 +987,18 @@ textarea {
     &::after {
       top: 6px;
       left: 9px;
+      transform: rotate(45deg);
+
       width: 10px;
       height: 10px;
       border-top: 2px solid $color-dark;
       border-left: 2px solid $color-dark;
+
       background-color: transparent;
-      transform: rotate(45deg);
+    }
+
+    &:hover {
+      transform: scale(1.22);
     }
   }
 
@@ -957,24 +1021,29 @@ textarea {
 .social {
   display: flex;
   gap: 40px;
+
   margin-bottom: 0;
   padding: 0;
+
   list-style: none;
 
   &__link {
     display: block;
+
     width: 24px;
     height: 24px;
+
     background-image: url('../images/Group 8 (1).png');
     background-repeat: no-repeat;
     background-size: 152px 24px;
+
     transition:
       opacity 0.3s,
       transform 0.3s;
 
     &:hover {
-      opacity: 0.7;
       transform: scale(1.15);
+      opacity: 0.7;
     }
 
     &--facebook {
