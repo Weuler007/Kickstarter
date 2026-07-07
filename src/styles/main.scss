@@ -264,10 +264,6 @@ textarea {
       min-height: 112px;
     }
 
-    &__nav {
-      display: flex;
-    }
-
     &__menu {
       display: none;
     }
@@ -322,6 +318,38 @@ textarea {
 
   @include on-desktop {
     display: none;
+  }
+}
+
+.page-nav {
+  display: none;
+
+  @include on-desktop {
+    display: block;
+    padding: 0 0 40px;
+
+    &__container {
+      display: flex;
+      justify-content: center;
+      gap: 84px;
+    }
+
+    &__link {
+      color: $color-dark;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 1.2;
+      text-transform: uppercase;
+      transition: color 0.3s;
+
+      &--active {
+        font-weight: 700;
+      }
+
+      &:hover {
+        color: $color-accent;
+      }
+    }
   }
 }
 
