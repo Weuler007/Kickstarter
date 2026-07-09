@@ -311,6 +311,10 @@ textarea {
       min-height: 112px;
     }
 
+    &__nav {
+      display: flex;
+    }
+
     &__menu {
       display: none;
     }
